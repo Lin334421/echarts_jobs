@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>ECharts 实例</title>
+    <!-- 引入 echarts_sample.js -->
+    <script src="./echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-stat@1.2.0/dist/ecStat.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!--    <script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/js/sprinkle.js"></script>-->
+    <!--    <script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/js/jquery-1.2.6.min.js"></script>-->
+    <!--    <script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/js/jquery-ui-personalized-1.5.2.packed.js"></script>-->
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<script type="module" src="bar_column.js"></script>
+<script type="module" src="graph.js"></script>
+<select id="dropdown">
+    <option value="option1" disabled selected>top_n_referenced_file_name</option>
+</select>
+<div id="main" style="width: 600px;height:400px;"></div>
+<div id="graph" style="width: 600px;height:400px;"></div>
+</body>
+</html>
