@@ -1,12 +1,14 @@
 
 
-var ROOT_PATH = '';
+var ROOT_PATH = 'http://192.168.8.110:5000';
 var api_path = '/repo_dependencies/one_file_reference_graph'
 var chartDom = document.getElementById('graph');
 var myChart = echarts.init(chartDom);
 var option;
 const dropdown = document.getElementById('dropdown');
 myChart.showLoading();
+
+
 
 dropdown.addEventListener('change', function() {
     const selectedValue = dropdown.value;

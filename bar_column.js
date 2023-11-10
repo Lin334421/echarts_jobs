@@ -1,4 +1,4 @@
-var ROOT_PATH = '';
+var ROOT_PATH = 'http://192.168.8.110:5000';
 
 var chartDom = document.getElementById('main');
 var myChart = echarts.init(chartDom);
@@ -25,7 +25,7 @@ fetch(ROOT_PATH+'/repo_dependencies/top_referenced_file')
     });
 dropdown.addEventListener('change', function() {
     const selectedValue = dropdown.value;
-    console.log('选择的值:', selectedValue);
+    // console.log('选择的值:', selectedValue);
     myChart.hideLoading();
     let option_data
     fetch(ROOT_PATH+'/repo_dependencies/top_referenced_file_area_commit_info?value='+selectedValue, {
@@ -39,9 +39,9 @@ dropdown.addEventListener('change', function() {
         .then(response => response.json())
         .then(data => {
             // option_data = data
-            console.log('-----------------------')
-            console.log(data); // 处理后端返回的数据
-            console.log('..................')
+            // console.log('-----------------------')
+            // console.log(data); // 处理后端返回的数据
+            // console.log('..................')
             option = {
                 tooltip: {
                     trigger: 'axis',
